@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registrasi dan List Pendaftar</title>
+</head>
+<body>
+    <div class="tabs">
+        <button class="tablink" onclick="openTab('registrasi')">Registrasi</button>
+        <button class="tablink" onclick="openTab('list')">List Pendaftar</button>
+    </div>
+
+    <div id="registrasi" class="tabcontent">
+        <h2>Registrasi</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required minlength="10">
+            </div>
+            <div class="form-group">
+                <label for="umur">Umur:</label>
+                <input type="number" id="umur" name="umur" required min="25">
+            </div>
+            <div class="form-group">
+                <label for="uang_saku">Uang Saku:</label>
+                <input type="number" id="uang_saku" name="uang_saku" required min="100000" max="1000000">
+            </div>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <div id="list" class="tabcontent">
+        <h2>List Pendaftar</h2>
+        <div id="pendaftarTable"></div>
+        <div id="resume"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
